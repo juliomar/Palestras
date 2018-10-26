@@ -1,0 +1,46 @@
+unit XStringsTestes;
+
+interface
+
+uses
+  DUnitX.TestFramework, XStrings;
+
+type
+
+  [TestFixture]
+  TXStringsTestes = class(TObject)
+  private
+    FXStrings: TXStrings;
+  public
+    [Setup]
+    procedure Setup;
+    [TearDown]
+    procedure TearDown;
+    [Test]
+    procedure ValidarSeAStringDeRetornoPossuiSomenteNumeros;
+  end;
+
+implementation
+
+procedure TXStringsTestes.Setup;
+begin
+  FXStrings := TXStrings.Create;
+end;
+
+procedure TXStringsTestes.TearDown;
+begin
+  if Assigned(FXStrings) then FXStrings.Free;
+end;
+
+procedure TXStringsTestes.ValidarSeAStringDeRetornoPossuiSomenteNumeros;
+var
+  Aux: String;
+begin
+  Aux := FXStrings.SomenteNumeros('A0-2,45%4$38&¨8689.3');
+
+  Assert.IsTrue(Aux = '024543886893', 'String de entrada A0-2,45%4$38&¨8689.3 deveria retornar 024543886893 mas retornou ' + Aux);
+end;
+
+initialization
+  TDUnitX.RegisterTestFixture(TXStringsTestes);
+end.
