@@ -1,24 +1,18 @@
-program DUnitXMock;
-{
+program UnitXTest;
 
-  Delphi DUnit Test Project
-  -------------------------
-  This project contains the DUnit test framework and the GUI/Console test runners.
-  Add "CONSOLE_TESTRUNNER" to the conditional defines entry in the project options
-  to use the console test runner.  Otherwise the GUI test runner will be used by
-  default.
-
-}
-
+{$IFNDEF TESTINSIGHT}
 {$APPTYPE CONSOLE}
-{$STRONGLINKTYPES ON}
+{$ENDIF}{$STRONGLINKTYPES ON}
 uses
   System.SysUtils,
+  {$IFDEF TESTINSIGHT}
+  TestInsight.DUnitX,
+  {$ENDIF }
   DUnitX.Loggers.Console,
   DUnitX.Loggers.Xml.NUnit,
   DUnitX.TestFramework,
-  uExemplo in 'uExemplo.pas',
-  uTestes in 'uTestes.pas';
+  Unitx.Pessoa.test in 'Unitx.Pessoa.test.pas',
+  Classe.Pessoa in '..\..\Exemplo1\Classe.Pessoa.pas';
 
 var
   runner : ITestRunner;
@@ -26,6 +20,10 @@ var
   logger : ITestLogger;
   nunitLogger : ITestLogger;
 begin
+{$IFDEF TESTINSIGHT}
+  TestInsight.DUnitX.RunRegisteredTests;
+  exit;
+{$ENDIF}
   try
     //Check command line options, will exit if invalid
     TDUnitX.CheckCommandLine;

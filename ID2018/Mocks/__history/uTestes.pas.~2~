@@ -41,7 +41,7 @@ var
   Mock: TMock<IUsuario>;
 begin
   Mock := TMock<IUsuario>.Create;
-  Mock.Setup.WillReturn('aster').When.NomeUsuario; // Aqui basta trocar o usuario aí o teste irá funcionar...
+  Mock.Setup.WillReturn('master').When.NomeUsuario; // Aqui basta trocar o usuario aí o teste irá funcionar...
   Assert.IsTrue(FUsuario.EhUsuarioValido(TStub<ILog>.Create, Mock), 'Teste falhou!');
 end;
 

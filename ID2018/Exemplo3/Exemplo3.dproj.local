@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2017/05/11 11:01:01.000.503,=C:\Users\juliomar\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2017/05/19 09:02:54.000.480,=C:\Users\juliomar\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2017/07/27 11:42:50.000.640,=C:\Users\juliomar\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018/02/13 12:41:37.000.325,=C:\Users\juliomar\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018/03/12 22:09:25.000.025,=C:\Users\juliomar\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018/03/15 12:22:26.000.577,=C:\Users\juliomar\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018/04/19 01:29:51.000.680,=C:\Users\juliomar\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018/09/04 20:45:55.000.368,=C:\Users\juliomar\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018/10/02 02:26:44.000.375,=C:\Users\juliomar\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018/11/01 08:41:24.000.760,=C:\Users\juliomar\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018/11/10 12:41:08.000.687,=C:\Users\juliomar\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018/11/10 12:41:50.000.879,=C:\Users\juliomar\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018/11/10 12:42:22.000.915,=C:\Users\juliomar\Documents\Embarcadero\Studio\Projects\DetailView1.pas</Transaction>
+    <Transaction>2018/11/10 12:42:22.000.427,=C:\Users\juliomar\Documents\Embarcadero\Studio\Projects\GridView1.pas</Transaction>
+    <Transaction>2018/11/10 12:43:06.000.439,=C:\Users\juliomar\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018/12/17 02:18:15.976,C:\Users\juliomar\Desktop\Exemplo3\Exemplo3.dproj=C:\Users\juliomar\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2018/12/17 02:26:07.128,=C:\Users\juliomar\Desktop\Exemplo3\Unit1.pas</Transaction>
+    <Transaction>2018/12/17 02:26:56.353,C:\Users\juliomar\Desktop\Exemplo3\Classe.Calculadora.pas=C:\Users\juliomar\Desktop\Exemplo3\Unit1.pas</Transaction>
+    <Transaction>2018/12/17 02:27:41.698,=C:\Users\juliomar\Desktop\Exemplo3\Unit1.pas</Transaction>
+    <Transaction>2018/12/17 02:34:52.365,C:\Users\juliomar\Desktop\Exemplo3\Teste.Calculadora.pas=C:\Users\juliomar\Desktop\Exemplo3\Unit1.pas</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5"/>
+	</ActiveMobileDevice>
+</BorlandProject>
