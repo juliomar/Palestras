@@ -1,0 +1,35 @@
+unit Model.Artista;
+
+interface
+
+uses
+  Spring,
+  Spring.Persistence.Mapping.Attributes;
+
+type
+  TArtista = class
+  private
+    FName: string;
+    FArtistId: integer;
+    procedure SetArtistId(const Value: integer);
+    procedure SetName(const Value: string);
+  public
+    property ArtistId : integer read FArtistId write SetArtistId;
+    property Name : string read FName write SetName;
+  end;
+
+implementation
+
+{ TArtista }
+
+procedure TArtista.SetArtistId(const Value: integer);
+begin
+  FArtistId := Value;
+end;
+
+procedure TArtista.SetName(const Value: string);
+begin
+  FName := Value;
+end;
+
+end.
