@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/03/22 08:43:38.000.765,=C:\Users\juliomar\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/03/22 11:06:46.000.809,=C:\Users\juliomar\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/03/31 14:11:17.000.312,=C:\Users\juliomar\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/04/03 13:25:15.000.739,=C:\Users\juliomar\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/05/04 14:40:50.000.144,=C:\Users\juliomar\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/07/13 08:28:17.000.619,=C:\Users\juliomar\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/08/02 15:23:54.000.986,=C:\Users\juliomar\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/09/01 15:03:10.000.127,=C:\Users\juliomar\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/09/06 15:29:32.000.847,=C:\Users\juliomar\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/09/12 14:55:43.000.873,=C:\Users\juliomar\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/03 16:52:01.000.459,=C:\Users\juliomar\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/11/08 05:18:44.000.997,C:\Users\juliomar\Desktop\exemplo\apiserver.dproj=C:\Users\juliomar\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile Android64="DM0321A841075"/>
+	</ActiveMobileDevice>
+</BorlandProject>

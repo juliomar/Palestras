@@ -1,0 +1,68 @@
+{
+    "version": "2.0.0",
+    "runner": "terminal",
+    "tasks": [
+        {
+            "label": "Build",
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "Echo",
+                "Active"
+            ]
+        },
+        {
+            "label": "Echo",
+            "type": "shell",
+            "command": "echo 'Building...'",
+            "problemMatcher": []
+        },
+        {
+            "label": "Sleepdelay",
+            "type": "shell",
+            "command": "sleep ${config:TMS.options.electron.debug.delay}",
+            "windows": {
+                "command": "ping 127.0.0.1 -n ${config:TMS.options.electron.debug.delay} > '${workspaceFolder}\\.vscode\\null.txt'"
+            },
+            "group": "none",
+            "presentation": {
+                "reveal": "silent",
+                "panel": "new"
+            }
+        },        
+        {
+            "label": "Active",
+            "type": "build",
+            "operation": "compile",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$tmswebcoreerror",
+                "$tmswebcorewarning"
+            ]
+        },
+        {
+            "label": "Debug",
+            "type": "build",
+            "operation": "compile",
+            "buildconfiguration": "Debug",
+            "group": "build",
+            "problemMatcher": [
+                "$tmswebcoreerror",
+                "$tmswebcorewarning"
+            ]
+        },
+        {
+            "label": "Release",
+            "type": "build",
+            "operation": "compile",
+            "buildconfiguration": "Release",
+            "group": "build",
+            "problemMatcher": [
+                "$tmswebcoreerror",
+                "$tmswebcorewarning"
+            ]
+        }
+   ]
+}
