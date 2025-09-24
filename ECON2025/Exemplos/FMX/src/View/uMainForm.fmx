@@ -1,0 +1,483 @@
+object MainForm: TMainForm
+  Left = 0
+  Top = 0
+  Caption = 'Sistema NFCe - Emiss'#227'o de Notas Fiscais'
+  ClientHeight = 600
+  ClientWidth = 900
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 0
+  object LayoutMain: TLayout
+    Align = Client
+    Size.Width = 900.000000000000000000
+    Size.Height = 600.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object LayoutHeader: TLayout
+      Align = Top
+      Size.Width = 900.000000000000000000
+      Size.Height = 60.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object LabelTitle: TLabel
+        Align = Client
+        StyledSettings = [Family, Style]
+        Size.Width = 900.000000000000000000
+        Size.Height = 60.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 24.000000000000000000
+        TextSettings.FontColor = claBlue
+        TextSettings.HorzAlign = Center
+        Text = 'Sistema de Emiss'#227'o de NFCe'
+        TabOrder = 0
+      end
+    end
+    object TabControl1: TTabControl
+      Align = Client
+      Size.Width = 900.000000000000000000
+      Size.Height = 540.000000000000000000
+      Size.PlatformDefault = False
+      TabIndex = 0
+      TabOrder = 1
+      TabPosition = Top
+      Sizes = (
+        900s
+        514s
+        900s
+        514s
+        900s
+        514s
+        900s
+        514s)
+      object TabItemNFCe: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = True
+        Size.Width = 80.000000000000000000
+        Size.Height = 26.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'Nova NFCe'
+        ExplicitSize.cx = 50.000000000000000000
+        ExplicitSize.cy = 50.000000000000000000
+        object LayoutNFCe: TLayout
+          Align = Client
+          Size.Width = 900.000000000000000000
+          Size.Height = 514.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object LayoutNFCeHeader: TLayout
+            Align = Top
+            Size.Width = 900.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object ButtonNewNFCe: TButton
+              Position.X = 10.000000000000000000
+              Position.Y = 10.000000000000000000
+              Size.Width = 100.000000000000000000
+              Size.Height = 30.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              Text = 'Nova NFCe'
+              OnClick = ButtonNewNFCeClick
+            end
+            object ButtonIssueNFCe: TButton
+              Position.X = 120.000000000000000000
+              Position.Y = 10.000000000000000000
+              Size.Width = 100.000000000000000000
+              Size.Height = 30.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 1
+              Text = 'Emitir NFCe'
+              OnClick = ButtonIssueNFCeClick
+            end
+            object ButtonGeneratePDF: TButton
+              Position.X = 230.000000000000000000
+              Position.Y = 10.000000000000000000
+              Size.Width = 100.000000000000000000
+              Size.Height = 30.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 2
+              Text = 'Gerar PDF'
+              OnClick = ButtonGeneratePDFClick
+            end
+          end
+          object LayoutNFCeContent: TLayout
+            Align = Client
+            Size.Width = 900.000000000000000000
+            Size.Height = 464.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            object LayoutCustomer: TLayout
+              Align = Top
+              Size.Width = 900.000000000000000000
+              Size.Height = 60.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              object LabelCustomer: TLabel
+                Position.X = 10.000000000000000000
+                Position.Y = 10.000000000000000000
+                Size.Width = 60.000000000000000000
+                Size.Height = 20.000000000000000000
+                Size.PlatformDefault = False
+                Text = 'Cliente:'
+                TabOrder = 0
+              end
+              object ComboBoxCustomers: TComboBox
+                Position.X = 10.000000000000000000
+                Position.Y = 30.000000000000000000
+                Size.Width = 300.000000000000000000
+                Size.Height = 22.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 1
+                OnChange = ComboBoxCustomersChange
+              end
+            end
+            object LayoutAddItem: TLayout
+              Align = Top
+              Position.Y = 60.000000000000000000
+              Size.Width = 900.000000000000000000
+              Size.Height = 60.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 1
+              object ComboBoxProducts: TComboBox
+                Position.X = 10.000000000000000000
+                Position.Y = 10.000000000000000000
+                Size.Width = 300.000000000000000000
+                Size.Height = 22.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 0
+              end
+              object EditQuantity: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                TabOrder = 1
+                KeyboardType = NumberPad
+                Text = '1'
+                Position.X = 320.000000000000000000
+                Position.Y = 10.000000000000000000
+                Size.Width = 80.000000000000000000
+                Size.Height = 22.000000000000000000
+                Size.PlatformDefault = False
+              end
+              object ButtonAddItem: TButton
+                Position.X = 410.000000000000000000
+                Position.Y = 10.000000000000000000
+                Size.Width = 100.000000000000000000
+                Size.Height = 22.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 2
+                Text = 'Adicionar Item'
+                OnClick = ButtonAddItemClick
+              end
+            end
+            object LayoutItems: TLayout
+              Align = Client
+              Size.Width = 900.000000000000000000
+              Size.Height = 284.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 2
+              object LabelItems: TLabel
+                Align = Top
+                Size.Width = 900.000000000000000000
+                Size.Height = 20.000000000000000000
+                Size.PlatformDefault = False
+                Text = 'Itens da NFCe:'
+                TabOrder = 0
+              end
+              object GridItems: TGrid
+                Align = Client
+                CanFocus = True
+                ClipChildren = True
+                Size.Width = 900.000000000000000000
+                Size.Height = 264.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 1
+                RowCount = 0
+                OnGetValue = GridItemsGetValue
+                Viewport.Width = 896.000000000000000000
+                Viewport.Height = 239.000000000000000000
+                object StringColumn1: TStringColumn
+                  Header = 'C'#243'digo'
+                  HeaderSettings.TextSettings.WordWrap = False
+                  Size.Width = 80.000000000000000000
+                end
+                object StringColumn2: TStringColumn
+                  Header = 'Produto'
+                  HeaderSettings.TextSettings.WordWrap = False
+                  Size.Width = 200.000000000000000000
+                end
+                object StringColumn3: TStringColumn
+                  Header = 'Quantidade'
+                  HeaderSettings.TextSettings.WordWrap = False
+                end
+                object StringColumn4: TStringColumn
+                  Header = 'Valor Unit'#225'rio'
+                  HeaderSettings.TextSettings.WordWrap = False
+                  Size.Width = 120.000000000000000000
+                end
+                object StringColumn5: TStringColumn
+                  Header = 'Total'
+                  HeaderSettings.TextSettings.WordWrap = False
+                  Size.Width = 120.000000000000000000
+                end
+              end
+            end
+            object LayoutTotal: TLayout
+              Align = Bottom
+              Position.Y = 404.000000000000000000
+              Size.Width = 900.000000000000000000
+              Size.Height = 60.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 3
+              object LabelTotal: TLabel
+                Position.X = 600.000000000000000000
+                Position.Y = 20.000000000000000000
+                Size.Width = 80.000000000000000000
+                Size.Height = 20.000000000000000000
+                Size.PlatformDefault = False
+                Text = 'Total Geral:'
+                TabOrder = 0
+              end
+              object LabelTotalValue: TLabel
+                StyledSettings = [Family, Style]
+                Position.X = 690.000000000000000000
+                Position.Y = 20.000000000000000000
+                Size.Width = 120.000000000000000000
+                Size.Height = 20.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Size = 16.000000000000000000
+                TextSettings.FontColor = claGreen
+                Text = 'R$ 0,00'
+                TabOrder = 1
+              end
+            end
+          end
+        end
+      end
+      object TabItemProducts: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = False
+        Size.Width = 68.000000000000000000
+        Size.Height = 26.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'Produtos'
+        ExplicitSize.cx = 50.000000000000000000
+        ExplicitSize.cy = 50.000000000000000000
+        object LayoutProducts: TLayout
+          Align = Client
+          Size.Width = 900.000000000000000000
+          Size.Height = 514.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object LayoutProductsHeader: TLayout
+            Align = Top
+            Size.Width = 900.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object ButtonNewProduct: TButton
+              Position.X = 10.000000000000000000
+              Position.Y = 10.000000000000000000
+              Size.Width = 120.000000000000000000
+              Size.Height = 30.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              Text = 'Novo Produto'
+            end
+          end
+          object GridProducts: TGrid
+            Align = Client
+            CanFocus = True
+            ClipChildren = True
+            Size.Width = 900.000000000000000000
+            Size.Height = 464.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            RowCount = 0
+            Viewport.Width = 896.000000000000000000
+            Viewport.Height = 439.000000000000000000
+            object StringColumn6: TStringColumn
+              Header = 'C'#243'digo'
+              HeaderSettings.TextSettings.WordWrap = False
+              Size.Width = 80.000000000000000000
+            end
+            object StringColumn7: TStringColumn
+              Header = 'Nome'
+              HeaderSettings.TextSettings.WordWrap = False
+              Size.Width = 200.000000000000000000
+            end
+            object StringColumn8: TStringColumn
+              Header = 'Pre'#231'o'
+              HeaderSettings.TextSettings.WordWrap = False
+            end
+            object StringColumn9: TStringColumn
+              Header = 'Estoque'
+              HeaderSettings.TextSettings.WordWrap = False
+              Size.Width = 80.000000000000000000
+            end
+          end
+        end
+      end
+      object TabItemCustomers: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = False
+        Size.Width = 62.000000000000000000
+        Size.Height = 26.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'Clientes'
+        ExplicitSize.cx = 50.000000000000000000
+        ExplicitSize.cy = 50.000000000000000000
+        object LayoutCustomers: TLayout
+          Align = Client
+          Size.Width = 900.000000000000000000
+          Size.Height = 514.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object LayoutCustomersHeader: TLayout
+            Align = Top
+            Size.Width = 900.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object ButtonNewCustomer: TButton
+              Position.X = 10.000000000000000000
+              Position.Y = 10.000000000000000000
+              Size.Width = 120.000000000000000000
+              Size.Height = 30.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              Text = 'Novo Cliente'
+            end
+          end
+          object GridCustomers: TGrid
+            Align = Client
+            CanFocus = True
+            ClipChildren = True
+            Size.Width = 900.000000000000000000
+            Size.Height = 464.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            RowCount = 0
+            Viewport.Width = 896.000000000000000000
+            Viewport.Height = 439.000000000000000000
+            object StringColumn10: TStringColumn
+              Header = 'Nome'
+              HeaderSettings.TextSettings.WordWrap = False
+              Size.Width = 200.000000000000000000
+            end
+            object StringColumn11: TStringColumn
+              Header = 'Documento'
+              HeaderSettings.TextSettings.WordWrap = False
+              Size.Width = 120.000000000000000000
+            end
+            object StringColumn12: TStringColumn
+              Header = 'Email'
+              HeaderSettings.TextSettings.WordWrap = False
+              Size.Width = 150.000000000000000000
+            end
+            object StringColumn13: TStringColumn
+              Header = 'Telefone'
+              HeaderSettings.TextSettings.WordWrap = False
+              Size.Width = 120.000000000000000000
+            end
+          end
+        end
+      end
+      object TabItemReports: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = False
+        Size.Width = 73.000000000000000000
+        Size.Height = 26.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'Relat'#243'rios'
+        ExplicitSize.cx = 50.000000000000000000
+        ExplicitSize.cy = 50.000000000000000000
+        object LayoutReports: TLayout
+          Align = Client
+          Size.Width = 900.000000000000000000
+          Size.Height = 514.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object ButtonRefreshReports: TButton
+            Align = Top
+            Size.Width = 900.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            Text = 'Atualizar Lista'
+            OnClick = ButtonRefreshReportsClick
+          end
+          object GridNFCeList: TGrid
+            Align = Left
+            CanFocus = True
+            ClipChildren = True
+            Position.Y = 40.000000000000000000
+            Size.Width = 450.000000000000000000
+            Size.Height = 474.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            RowCount = 0
+            OnGetValue = GridNFCeListGetValue
+            OnCellClick = GridNFCeListCellClick
+            Viewport.Width = 446.000000000000000000
+            Viewport.Height = 449.000000000000000000
+            object StringColumn14: TStringColumn
+              Header = 'N'#250'mero'
+              HeaderSettings.TextSettings.WordWrap = False
+              Size.Width = 80.000000000000000000
+            end
+            object StringColumn15: TStringColumn
+              Header = 'S'#233'rie'
+              HeaderSettings.TextSettings.WordWrap = False
+              Size.Width = 60.000000000000000000
+            end
+            object StringColumn16: TStringColumn
+              Header = 'Data'
+              HeaderSettings.TextSettings.WordWrap = False
+              Size.Width = 120.000000000000000000
+            end
+            object StringColumn17: TStringColumn
+              Header = 'Status'
+              HeaderSettings.TextSettings.WordWrap = False
+              Size.Width = 80.000000000000000000
+            end
+            object StringColumn18: TStringColumn
+              Header = 'Total'
+              HeaderSettings.TextSettings.WordWrap = False
+            end
+          end
+          object MemoNFCeInfo: TMemo
+            Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+            DataDetectorTypes = []
+            Align = Client
+            Size.Width = 450.000000000000000000
+            Size.Height = 474.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 2
+            Viewport.Width = 446.000000000000000000
+            Viewport.Height = 470.000000000000000000
+          end
+        end
+      end
+    end
+  end
+end
